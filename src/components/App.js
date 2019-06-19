@@ -1,20 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
 
-const App = () => (
-  <div className="container">
-    <h1>React Lightweight</h1>
-    <p>
-      Lightweight starter kit for creating apps with React. More on{" "}
-      <a
-        href="https://github.com/mkeyy/react-lightweight"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Github
-      </a>
-      .
-    </p>
-  </div>
-);
+import GameEngine from "./game/GameEngine.jsx";
+
+class App extends Component {
+  render() {
+    return <GameEngine />;
+  }
+}
 
 export default App;
