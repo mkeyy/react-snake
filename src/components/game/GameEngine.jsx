@@ -8,11 +8,12 @@ class GameEngine extends Component {
     super();
 
     this.state = {
-      cellsX: 21,
-      cellsY: 21,
+      cellsX: 30,
+      cellsY: 20,
       rez: 25,
-      speed: 200,
-      running: true
+      speed: 150,
+      running: true,
+      score: 0
     };
 
     this.snake = new Snake(this.state.cellsX, this.state.cellsY);
@@ -69,6 +70,7 @@ class GameEngine extends Component {
       if (this.snake.handleEat(this.food)) {
         ctx.clearRect(0, 0, board.width, board.height);
         this.food.update();
+        this.setState({ score: this.state.score + 10 });
       }
 
       this.snake.update();
@@ -82,11 +84,16 @@ class GameEngine extends Component {
   };
 
   render() {
-    const { cellsX, cellsY } = this.state;
+    const { cellsX, cellsY, score } = this.state;
     const width = cellsX * this.state.rez;
     const height = cellsY * this.state.rez;
 
-    return <canvas id="board" width={width} height={height} />;
+    return (
+      <div>
+        <canvas id="board" width={width} height={height} />
+        <div>Score: {score}</div>
+      </div>
+    );
   }
 }
 
