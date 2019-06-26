@@ -58,7 +58,7 @@ class Snake {
     let board = document.getElementById("board");
     let ctx = board.getContext("2d");
 
-    ctx.fillStyle = "rgba(0, 0, 0, 0.3)";
+    ctx.fillStyle = "rgb(0 ,0, 0, 0.3)";
 
     for (let i = 0; i < this.body.length; i++) {
       ctx.fillRect(this.body[i].x, this.body[i].y, 1, 1);

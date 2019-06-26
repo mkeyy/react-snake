@@ -28,7 +28,8 @@ module.exports = {
   ],
   devServer: {
     contentBase: "./public",
-    hot: true
+    hot: true,
+    historyApiFallback: true
   },
   module: {
     rules: [
