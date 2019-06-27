@@ -26,3 +26,29 @@
     border: 5px solid #000;
   }
 }
+
+.snake-start,
+.snake-end {
+  .snake-h1 {
+    font-size: 120px;
+    text-transform: uppercase;
+  }
+  .snake-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px 20px;
+    margin: 0 auto 15px;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+  }
+}
