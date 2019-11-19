@@ -68,6 +68,7 @@ class GameEngine extends Component {
 
     let timeInt = setInterval(() => {
       this.setState({ time: this.state.time - 1 });
+
       if (this.state.time < 0) {
         clearInterval(timeInt);
         document.getElementById("countdown").remove();

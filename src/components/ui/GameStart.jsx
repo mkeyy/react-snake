@@ -7,6 +7,9 @@ const GameStart = () => (
     <Link to="/game" className="snake-link">
       Start
     </Link>
+    <Link to="/scores" className="snake-link">
+      Scores
+    </Link>
     <Link to="/options" className="snake-link">
       Options
     </Link>
